@@ -81,8 +81,36 @@ body {
 .hero-btn {
   text-transform: uppercase;
   color: white;
+  animation: slideFromBottom 5s ease-in-out 1;
 }
 .temp {
   min-height: 100vh;
   background-color: red;
+}
+
+/* animation */
+.hero-text {
+  animation: slideFromTop 5s ease-in-out 1;
+}
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
